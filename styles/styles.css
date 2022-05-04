@@ -1,0 +1,274 @@
+
+body{
+    margin: 0;
+    background: #FFEEFF;
+}
+h1,h2,h3,h4,h5{
+    margin:0%;
+}
+.headText{
+    position:absolute;
+    left:20px;
+    top:-5px;
+    font-size: 65px;
+    font-family:'Segoe UI';
+    font-weight: 500;
+    letter-spacing: 11px;
+    color:#FFEEFF;
+
+}
+.head {
+    width: 100%;
+    height: 83px;
+    background: #333333;
+  }
+.button1{
+    width:320px;
+    height:100px;
+    position:absolute;
+    left:250px;
+    top:800px;
+    border: 2px solid black;
+    background: white;
+}
+.button2{
+    width:320px;
+    height:100px;
+    position:absolute;
+    left:600px;
+    top:800px;
+    border: 2px solid black;
+    background: white;
+}
+.button3{
+    width:320px;
+    height:100px;
+    position:absolute;
+    left:950px;
+    top:800px;
+    border: 2px solid black;
+    background: white;
+}
+.button4{
+    width:320px;
+    height:100px;
+    position:absolute;
+    left:1300px;
+    top:800px;
+    border: 2px solid black;
+    background: white;
+}
+.buttontext{
+    font-family:'Raleway Medium', 'Raleway Regular';
+    font-weight:500;
+    font-size:40px;
+    text-align:center;
+    color: black;
+}
+.buttontextlight{
+    margin-top: 20px;
+    font-family:'Raleway Medium', 'Raleway Regular';
+    font-weight:500;
+    font-size:50px;
+    text-align:center;
+    color: black;
+}
+.line{
+    width: 1720px;
+    height: 3px;
+    position: absolute;
+    left: 80px;
+    top: 750px;
+    background: #8a5177;
+}
+#mouseTarget {
+    width: 510px;
+    height: 510px;
+    position: absolute;
+    left: 675px;
+    top: 140px;
+    border: 5px solid black;
+    border-radius: 150px;
+    background: url("../img/harambe.png") center;
+}
+.button1:hover {
+    transition: 400ms;
+    background: rgb(184, 184, 184);
+}
+.button2:hover {
+    transition: 400ms;
+    background: rgb(184, 184, 184);
+}
+.button3:hover {
+    transition: 400ms;
+    background: rgb(184, 184, 184);
+}
+.button4:hover {
+    transition: 400ms;
+    background: rgb(184, 184, 184);
+}
+/*
+Обо мне
+*/
+.myimage {
+    width: 313px;
+    height: 475px;
+    position: absolute;
+    left: 60px;
+    top: 255px;
+    background: url("../img/Mypic.svg") center;
+}
+.line1{
+    width: 1370px;
+    height: 3px;
+    position: absolute;
+    left: 420px;
+    top: 490px;
+    background: #282828;
+}
+.maintext{
+    width: 1070px;
+    position: absolute;
+    left: 475px;
+    top: 240px;
+    font-size: 24px;
+    font-family:'Segoe UI';
+    text-align: center;
+    color:#000000;
+}
+.hobbytext{
+    width: 1080px;
+    position: absolute;
+    left: 640px;
+    top: 545px;
+    font-size: 24px;
+    font-family:'Segoe UI';
+    text-align: center;
+    color:#000000;
+}
+/*
+Контактная информация
+*/
+.line2{
+    width: 3px;
+    height: 600px;
+    position: absolute;
+    left: 280px;
+    top: 200px;
+    background: #CEA7CA;
+
+}
+.line3{
+    width: 490px;
+    height: 3px;
+    position: absolute;
+    left: 1100px;
+    top: 800px;
+    background: #CEA7CA;
+
+}
+.line3text{
+    width: 350px;
+    height: 3px;
+    position: absolute;
+    left: 1175px;
+    top: 800px;
+    font-size: 32px;
+    font-family:'Arial Полужирный', 'Arial Обычный', 'Arial';
+    font-weight: 800;
+    color: black;
+}
+.gmail{
+    width: 127px ;
+    height: 127px ;
+    position: absolute;
+    left: 70px;
+    top: 240px;
+    background: url("../img/gmail.png") center;
+
+}
+.mail{
+    width: 115px ;
+    height: 115px ;
+    position: absolute;
+    left: 75px;
+    top: 445px;
+    background: url("../img/mail.png") center;
+
+}
+.viber{
+    width: 121px ;
+    height: 121px ;
+    position: absolute;
+    left: 75px;
+    top: 645px;
+    background: url("../img/viber.png") center;
+
+}
+.infotext{
+    width: 450px;
+    position: absolute;
+    left: 333px;
+    top: 200px;
+    font-size: 32px;
+    font-family:'Arial Полужирный', 'Arial Обычный', 'Arial';
+    font-weight: 800;
+    line-height: 200px;
+    color:#000000;
+}
+.vk{
+    width: 90px ;
+    height: 90px ;
+    position: absolute;
+    left: 1120px;
+    top: 700px;
+    background: url("../img/vk.png") center;
+    
+}
+.inst{
+    width: 90px ;
+    height: 90px ;
+    position: absolute;
+    left: 1240px;
+    top: 700px;
+    background: url("../img/inst.png") center;
+    
+}
+.steam{
+    width: 90px ;
+    height: 90px ;
+    position: absolute;
+    left: 1360px;
+    top: 700px;
+    background: url("../img/steam.png") center;
+    
+}
+.git{
+    width: 90px ;
+    height: 90px ;
+    position: absolute;
+    left: 1480px;
+    top: 700px;
+    background: url("../img/git.png") center;
+    
+}
+.vk:hover{
+    transition: 200ms;
+    border: 2px solid rgb(111, 0, 255);
+    border-radius: 20px;
+}
+.inst:hover{
+    transition: 200ms;
+    border: 2px solid rgb(111, 0, 255);
+    border-radius: 20px;
+}
+.steam:hover{
+    transition: 200ms;
+    border: 2px solid rgb(111, 0, 255);
+    border-radius: 100px;
+}
+.git:hover{
+    transition: 200ms;
+    border: 2px solid rgb(111, 0, 255);
+    border-radius: 100px;
+}
