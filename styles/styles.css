@@ -3,252 +3,267 @@ body{
     margin: 0;
     background: #FFEEFF;
 }
-h1,h2,h3,h4,h5{
-    margin:0%;
-}
 .headText{
-    position:absolute;
-    left:20px;
-    top:-5px;
-    font-size: 65px;
+    width: 90%;
+    vertical-align: middle;
+    position:relative;
+    left:1vw;
+    top:-0.5vh;
+    font-size: 7vmin;
     font-family:'Segoe UI';
     font-weight: 500;
-    letter-spacing: 11px;
+    letter-spacing: 0.7vw;
     color:#FFEEFF;
 
 }
 .head {
-    width: 100%;
-    height: 83px;
+    width:100%;
+    height: 9vh;
     background: #333333;
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
   }
+.mainBlockin{
+    position: absolute;
+    top:25%;
+    width:100%;
+    align-items: center;
+    vertical-align: middle;
+    display: flexbox;
+      
+ }
+.buttons{
+    display: flex;
+    position: relative;
+    top:8vh;
+    left: 12%;
+    width: 80%;
+
+}
 .button1{
-    width:320px;
-    height:100px;
-    position:absolute;
-    left:250px;
-    top:800px;
-    border: 2px solid black;
+    width:17vw;
+    height:10.5vh;
+    margin-left: 1vw;
+    border: 0.2vw solid black;
     background: white;
-}
-.button2{
-    width:320px;
-    height:100px;
-    position:absolute;
-    left:600px;
-    top:800px;
-    border: 2px solid black;
-    background: white;
-}
-.button3{
-    width:320px;
-    height:100px;
-    position:absolute;
-    left:950px;
-    top:800px;
-    border: 2px solid black;
-    background: white;
-}
-.button4{
-    width:320px;
-    height:100px;
-    position:absolute;
-    left:1300px;
-    top:800px;
-    border: 2px solid black;
-    background: white;
+    text-decoration: none;
+    overflow:hidden;
+
+
 }
 .buttontext{
+    position: relative;
+    top: 1.5vh;
     font-family:'Raleway Medium', 'Raleway Regular';
     font-weight:500;
-    font-size:40px;
+    font-size:3.5vmin;
     text-align:center;
     color: black;
+    text-decoration: none;
+
 }
 .buttontextlight{
-    margin-top: 20px;
+    position: relative;
+    margin-top: 3vh;
     font-family:'Raleway Medium', 'Raleway Regular';
     font-weight:500;
-    font-size:50px;
+    font-size:4.5vmin;
     text-align:center;
     color: black;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .line{
-    width: 1720px;
-    height: 3px;
-    position: absolute;
-    left: 80px;
-    top: 750px;
+    width: 90vw;
+    height: 0.3vh;
+    position: relative;
+    top: 6vh;
+    left:5%;
     background: #8a5177;
 }
 #mouseTarget {
-    width: 510px;
-    height: 510px;
-    position: absolute;
-    left: 675px;
-    top: 140px;
-    border: 5px solid black;
-    border-radius: 150px;
+    position: relative;
+    top:-7vh;
+    left: 37%;
+    width: 25vw;
+    height:25vw;
+    border: 0.5vmin solid black;
+    border-radius: 8vmin;
     background: url("../img/harambe.png") center;
+    background-size:cover;
+    
 }
 .button1:hover {
     transition: 400ms;
     background: rgb(184, 184, 184);
 }
-.button2:hover {
-    transition: 400ms;
-    background: rgb(184, 184, 184);
+.user{
+    position:absolute;
+    left: 83%;
+    top:3.5vh;
+    font-size: 2vmin;
+    font-family:'Segoe UI';
+    color:#ddb4dd;
+    text-decoration: underline solid violet;
 }
-.button3:hover {
+.user:hover{
     transition: 400ms;
-    background: rgb(184, 184, 184);
-}
-.button4:hover {
-    transition: 400ms;
-    background: rgb(184, 184, 184);
+    color:#ff75ff;
 }
 /*
 Обо мне
 */
+.block{
+    align-items: center;
+    vertical-align: middle;
+}
+.mainblock{
+    position:relative;
+    top:12vh;
+    left: 18%;
+    width: 75%;
+}
 .myimage {
     width: 313px;
     height: 475px;
-    position: absolute;
-    left: 60px;
-    top: 255px;
+    position:relative;
+    left:36%;
+    top:8vh;
     background: url("../img/Mypic.svg") center;
 }
 .line1{
-    width: 1370px;
+    position: relative;
+    top:4vh;
+    left:5%;
+    width: 80%;
     height: 3px;
-    position: absolute;
-    left: 420px;
-    top: 490px;
     background: #282828;
 }
 .maintext{
-    width: 1070px;
-    position: absolute;
-    left: 475px;
-    top: 240px;
+    left: 5%;
+    width: 75%;
     font-size: 24px;
     font-family:'Segoe UI';
-    text-align: center;
+    text-align:left;
     color:#000000;
 }
 .hobbytext{
-    width: 1080px;
-    position: absolute;
-    left: 640px;
-    top: 545px;
+    position: relative;
+    left: 15%;
+    top: 7vh;
+    width: 75%;
     font-size: 24px;
     font-family:'Segoe UI';
-    text-align: center;
+    text-align:end;
     color:#000000;
 }
 /*
 Контактная информация
 */
+.blockinf{
+    display: flex;
+    width: 60%;
+    position: relative;
+    left: 20%;
+    flex-direction: column;
+}
+.icons{
+    position: relative;
+    vertical-align: middle;
+    left: 13%;
+}
 .line2{
-    width: 3px;
-    height: 600px;
-    position: absolute;
-    left: 280px;
-    top: 200px;
+    width: 0.1vw;
+    height: 70vh;
+    position: relative;
+    left: 5%;
     background: #CEA7CA;
 
-}
-.line3{
-    width: 490px;
-    height: 3px;
-    position: absolute;
-    left: 1100px;
-    top: 800px;
-    background: #CEA7CA;
-
-}
-.line3text{
-    width: 350px;
-    height: 3px;
-    position: absolute;
-    left: 1175px;
-    top: 800px;
-    font-size: 32px;
-    font-family:'Arial Полужирный', 'Arial Обычный', 'Arial';
-    font-weight: 800;
-    color: black;
 }
 .gmail{
     width: 127px ;
     height: 127px ;
-    position: absolute;
-    left: 70px;
-    top: 240px;
     background: url("../img/gmail.png") center;
+    margin-bottom: 9vh;
 
 }
 .mail{
     width: 115px ;
     height: 115px ;
-    position: absolute;
-    left: 75px;
-    top: 445px;
     background: url("../img/mail.png") center;
+    margin-bottom: 9vh;
 
 }
 .viber{
     width: 121px ;
     height: 121px ;
-    position: absolute;
-    left: 75px;
-    top: 645px;
     background: url("../img/viber.png") center;
 
 }
 .infotext{
-    width: 450px;
-    position: absolute;
-    left: 333px;
-    top: 200px;
+    position: relative;
+    left: 30%;
+    width: 25vw;
+    font-size: 3vmin;
+    font-family:'Arial Полужирный', 'Arial Обычный', 'Arial';
+    font-weight: 800;
+    color:#000000;
+    white-space:pre;
+}
+.soc{
+    width: 40%;
+    position: relative;
+    left: 30%;
+    top:5vh;
+
+}
+.line3{
+    position: relative;
+    height: 0.3vh;
+    width: 100%;
+    background: black;
+
+}
+.line3text{
+    width: 350px;
+    height: 3px;
+    position: relative;
     font-size: 32px;
     font-family:'Arial Полужирный', 'Arial Обычный', 'Arial';
     font-weight: 800;
-    line-height: 200px;
-    color:#000000;
+    color: black;
+    text-align: center;
+}
+.socic{
+    display: flex;
+    position: relative;
+    top: 8vh;
+
 }
 .vk{
     width: 90px ;
     height: 90px ;
-    position: absolute;
-    left: 1120px;
-    top: 700px;
     background: url("../img/vk.png") center;
     
 }
 .inst{
     width: 90px ;
     height: 90px ;
-    position: absolute;
-    left: 1240px;
-    top: 700px;
     background: url("../img/inst.png") center;
     
 }
 .steam{
     width: 90px ;
     height: 90px ;
-    position: absolute;
-    left: 1360px;
-    top: 700px;
     background: url("../img/steam.png") center;
     
 }
 .git{
     width: 90px ;
     height: 90px ;
-    position: absolute;
-    left: 1480px;
-    top: 700px;
     background: url("../img/git.png") center;
     
 }
@@ -271,4 +286,53 @@ h1,h2,h3,h4,h5{
     transition: 200ms;
     border: 2px solid rgb(111, 0, 255);
     border-radius: 100px;
+}
+/*
+Галерея
+*/
+.gallereymain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.replaceimg img{
+    position: relative;
+    top:10vh;
+    left: -10%;
+    height: 120px;
+    width: 210px;
+    transform: scale(-1, 1);
+}
+.replaceimg1 img{
+    position: relative;
+    top:10vh;
+    left: 10%;
+    height: 120px;
+    width: 210px;
+}
+#mainImage{
+    position: relative;
+    top:10vh;
+    width: 500px;
+    border: 10px solid rgb(250, 143, 178);
+    
+}
+.uwu{
+    height:554px;
+    display: inline-flex;
+    background-repeat:no-repeat;
+}
+/*
+Вход пользователя
+*/
+.textarea{
+    width: 1070px;
+    height: 400px;
+    position: absolute;
+    left: 475px;
+    top: 240px;
+    font-size: 30px;
+    font-family:'Segoe UI';
+    text-align: center;
+    color:#000000;
 }
