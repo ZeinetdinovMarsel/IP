@@ -12,6 +12,16 @@
         <div class="headText">
             Контактная информация
         </div>
+        <?php
+        if($_COOKIE['user']==''):
+    ?>
+    <a href="userenter.php"><div class="user">
+        Вход/Регистрация
+    </div>
+    </a>
+    <?php else:?>
+        <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+    <?php endif;?>
     </div>
 <div class="blockinf">
     <div class="icons">

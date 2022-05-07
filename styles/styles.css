@@ -4,12 +4,11 @@ body{
     background: #FFEEFF;
 }
 .headText{
+    margin-bottom: 0.5vh;
     width: 90%;
-    vertical-align: middle;
     position:relative;
     left:1vw;
-    top:-0.5vh;
-    font-size: 7vmin;
+    font-size: 6vmin;
     font-family:'Segoe UI';
     font-weight: 500;
     letter-spacing: 0.7vw;
@@ -18,9 +17,7 @@ body{
 }
 .head {
     width:100%;
-    height: 9vh;
     background: #333333;
-    vertical-align: middle;
     align-items: center;
     display: flex;
   }
@@ -101,13 +98,20 @@ body{
     background: rgb(184, 184, 184);
 }
 .user{
-    position:absolute;
-    left: 83%;
-    top:3.5vh;
+    margin-right: 1vmin;
+    width: max-content;
+    position:relative;
     font-size: 2vmin;
     font-family:'Segoe UI';
     color:#ddb4dd;
     text-decoration: underline solid violet;
+}
+.username{
+    margin-right: 1vmin;
+    position:relative;
+    font-size: 2vmin;
+    font-family:'Segoe UI';
+    color:#ddb4dd;
 }
 .user:hover{
     transition: 400ms;
@@ -291,6 +295,8 @@ body{
 Галерея
 */
 .gallereymain{
+    position: relative;
+    top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -298,7 +304,6 @@ body{
 .replaceimg img{
     position: relative;
     top:10vh;
-    left: -10%;
     height: 120px;
     width: 210px;
     transform: scale(-1, 1);
@@ -306,33 +311,117 @@ body{
 .replaceimg1 img{
     position: relative;
     top:10vh;
-    left: 10%;
     height: 120px;
     width: 210px;
 }
 #mainImage{
+    overflow: hidden;
     position: relative;
     top:10vh;
     width: 500px;
     border: 10px solid rgb(250, 143, 178);
-    
+    white-space:nowrap;
 }
 .uwu{
+
     height:554px;
     display: inline-flex;
+    
     background-repeat:no-repeat;
 }
 /*
 Вход пользователя
 */
+.container{
+    width: 40vw;
+    position: relative;
+    left:30%;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 5vmin;
+    color: rgb(0, 0, 0);
+    background-color: #8842b183;
+    border:0.5vmin solid black;
+    border-radius: 1vmin;
+    margin: 0;
+}
+.inputblock{
+    max-height: 50vh;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    text-align: center;
+    color: rgb(54, 50, 50);
+    background-color: #cdb0dfd2;
+    border-radius: 0.5vmin;
+}
 .textarea{
-    width: 1070px;
-    height: 400px;
-    position: absolute;
-    left: 475px;
-    top: 240px;
-    font-size: 30px;
+    margin-top: 2vh;
+    width: 80%;
+    height: 15%;
+    font-size: 3.5vmin;
     font-family:'Segoe UI';
     text-align: center;
+    color:#000000;
+    border:0.2vmin solid black;
+    border-radius: 1vmin;
+}
+.regbutton{
+    margin: 2vh;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(124, 241, 150);
+    font-size: 2.5vmin;
+    border:0.1vmin solid rgb(0, 0, 0);
+    border-radius: 1vmin;
+}
+.regbutton:hover{
+    transition: 300ms;
+    background-color: rgb(80, 175, 101);
+}
+.file{
+    margin-top: 1vh;
+    position: relative;
+    left: 1vw;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.7vmin;
+    align-items: center;
+    width: 90%;
+}
+/*
+Страница Пользователя
+*/
+.cont{
+    width: 80%;
+    position: relative;
+    left:8vw;
+    top: 8vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border-radius: 6vmin;
+    margin: 0;
+}
+.userImage img{
+    width: 313px;
+    height: 475px;
+    margin: 5vmin;
+    position:relative;
+    border: 1vmin solid gray;
+    border-radius: 6vmin;
+}
+.userinfo{
+    margin-top: 9vh;
+    font-size: 3.5vmin;
+    font-family:'Segoe UI';
+    text-align: left;
     color:#000000;
 }

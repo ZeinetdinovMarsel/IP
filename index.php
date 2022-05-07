@@ -14,10 +14,16 @@
     <div class="headText">
     Harambe Dev
     </div>
-    <a href="userenter.html"><div class="user">
+    <?php
+        if($_COOKIE['user']==''):
+    ?>
+    <a href="userenter.php" class="user"><div class="user">
         Вход/Регистрация
     </div>
     </a>
+    <?php else:?>
+        <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+    <?php endif;?>
 </div>
 <div class="mainBlockin">
 <div id='mouseTarget'>
@@ -25,14 +31,14 @@
 <div class="line">
 </div>
 <div class="buttons">
-<a href="about_me.html" class="buttontext"><div class="button1">
+<a href="about_me.php" class="buttontext"><div class="button1">
         <div class="buttontextlight">
             Обо мне
         </div>
 </div>
 </a>
 
-<a href="contact_info.html" class="buttontext">
+<a href="contact_info.php" class="buttontext">
     <div class="button1">
         <div class="buttontext">
             Кон&#8203;такт&#8203;ная<br>Ин&#8203;фор&#8203;ма&#8203;ция
@@ -47,7 +53,7 @@
 </div>
 </a>
 
-<a href="galerey.html" class="buttontext"><div class="button1">
+<a href="galerey.php" class="buttontext"><div class="button1">
     <div class="buttontextlight">
         Галерея
     </div>

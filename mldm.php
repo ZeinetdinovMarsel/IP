@@ -12,6 +12,16 @@
         <div class="headText">
             Мои лабораторные работы МЛИДМ
         </div>
+        <?php
+        if($_COOKIE['user']==''):
+    ?>
+    <a href="userenter.php"><div class="user">
+        Вход/Регистрация
+    </div>
+    </a>
+    <?php else:?>
+        <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+    <?php endif;?>
     </div>
 <a href="mldmlab1.php"><div class=buttontext><br>Первая лабораторная работа</div></a>
 </div>
