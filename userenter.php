@@ -32,7 +32,7 @@
     <form action="auth.php" method="post" class="inputblock">
         <input type="text"  placeholder="Логин" class="textarea" name="login" id="login"/>
         <input type="password"  placeholder="Пароль" class="textarea" name="password" id="password"/>
-        <button class="regbutton" type="submit">Войти</button>
+        <button class="regbutton" type="submit">Вход</button>
     </form>
     
 </div>

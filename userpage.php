@@ -11,18 +11,9 @@
 <div class="head">
      
     <div class="headText">
-    Вход/Регистрация
+    Страница Пользователя
     </div>
-    <?php
-        if($_COOKIE['user']==''):
-    ?>
-    <a href="userenter.php" class="user"><div class="user">
-        Вход/Регистрация
-    </div>
-    </a>
-    <?php else:?>
         <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
-    <?php endif;?>
 </div>
 
 <div class="cont">
@@ -46,6 +37,8 @@
         Нет
     <?php else:?>
         Да
+        <br>
+        <a href="adminpage.php">Перейти на панель админа</a>
     <?php endif;?>
 </div>
 </body>

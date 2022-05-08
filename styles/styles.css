@@ -11,7 +11,7 @@ body{
     font-size: 6vmin;
     font-family:'Segoe UI';
     font-weight: 500;
-    letter-spacing: 0.7vw;
+    letter-spacing: 0.5vw;
     color:#FFEEFF;
 
 }
@@ -303,21 +303,20 @@ body{
 }
 .replaceimg img{
     position: relative;
-    top:10vh;
+    top:3vh;
     height: 120px;
     width: 210px;
     transform: scale(-1, 1);
 }
 .replaceimg1 img{
     position: relative;
-    top:10vh;
+    top:3vh;
     height: 120px;
     width: 210px;
 }
 #mainImage{
     overflow: hidden;
     position: relative;
-    top:10vh;
     width: 500px;
     border: 10px solid rgb(250, 143, 178);
     white-space:nowrap;
@@ -364,7 +363,7 @@ body{
     margin-top: 2vh;
     width: 80%;
     height: 15%;
-    font-size: 3.5vmin;
+    font-size: 2vmin;
     font-family:'Segoe UI';
     text-align: center;
     color:#000000;
@@ -387,26 +386,28 @@ body{
 }
 .file{
     margin-top: 1vh;
+    margin-bottom: 1vh;
     position: relative;
-    left: 1vw;
     display: flex;
     flex-direction: row;
     text-align: center;
     font-size: 1.7vmin;
     align-items: center;
     width: 90%;
+    height: 5vh;
 }
 /*
 Страница Пользователя
 */
 .cont{
-    width: 80%;
     position: relative;
-    left:8vw;
+    max-height: 70%;
+    height: 70%;
+    width: 70%;
+    left:25%;
     top: 8vh;
     display: flex;
     flex-direction: row;
-    background-color: #ffffff;
     border-radius: 6vmin;
     margin: 0;
 }
@@ -424,4 +425,51 @@ body{
     font-family:'Segoe UI';
     text-align: left;
     color:#000000;
+}
+.adminpanel{
+    width: 30vw;
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 1.9vmin;
+    color: rgb(0, 0, 0);
+    background-color: #2e2e2e;
+    border:0.5vmin solid black;
+    border-radius: 1vmin;
+    margin: 0;
+}
+.admininput{
+    max-height: 50vh;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    position: relative;
+    text-align: center;
+    color: rgb(68, 68, 68);
+    background-color: #adadadd2;
+    border: 0.1vmin solid black;
+    border-radius: 0.5vmin;
+}
+.addbutton{
+    margin: 0.5vmin;
+    font-size: 1.5vmin;
+    font-family:'Segoe UI';
+    text-align: center;
+    background-color: rgb(124, 241, 150);
+}
+table{
+    width: 20vw;
+    background-color: white;
+}
+td{
+    border: 0.1vmin solid black;
+    text-align: center;
+    background-color: white;
+}
+.tabletext{
+    color:white;
 }
