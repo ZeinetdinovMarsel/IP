@@ -23,7 +23,8 @@
         <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
     <?php endif;?>
     </div>
-<a href="mldmlab1.php"><div class=buttontext><br>Первая лабораторная работа</div></a>
+<a href="mldmlab1.php"><div class=buttontext><br>Первая лабораторная работа</div></a><br>
+<a href="mldmlab2.php"><div class=buttontext><br>Вторая лабораторная работа</div></a>
 </div>
 </body>
 

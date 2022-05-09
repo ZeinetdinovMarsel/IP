@@ -3,8 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Лабораторная работа 1</title>
-    <Link rel="stylesheet" href="styles/styles.css">
     <script type="text/javascript" src="scripts/mldm1labscripts.js"></script>
 </head>
 
