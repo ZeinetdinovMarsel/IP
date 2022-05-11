@@ -8,13 +8,21 @@
 </head>
 
 <body>
-<div class="head">
-     
-    <div class="headText">
-    Страница админа
-    </div>
-        <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
-</div>
+<nav class="navbar" id="msgText">
+    <ul class="link-group">
+        <li class="link"><a href="index.php">Главная</a></li>
+        <li class="link"><a href="about_me.php">Обо мне</a></li>
+        <li class="link"><a href="contact_info.php">Контактная Информация</a></li>
+        <li class="link"><a href="galerey.php">Галерея</a></li>
+        <li class="link"><a href="mldm.php">Лабораторные Млидм</a></li>
+        <?php
+        if($_COOKIE['user']==''):?>
+        <li class="link"><a href="userenter.php">Вход/Регистрация</a></li>
+        <?php else:?>
+        <li class="link active"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+    <?php endif;?>
+    </ul>
+</nav>
 
 <div class="cont">
     

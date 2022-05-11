@@ -9,26 +9,37 @@
 </head>
 
 <body>
-    <div class="head">
-        <div class="headText">
-        Моя Галерея
-    </div>
-    <?php
-        if($_COOKIE['user']==''):
-    ?>
-    <a href="userenter.php"><div class="user">
-        Вход/Регистрация
-    </div>
-    </a>
-    <?php else:?>
-        <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+<div>
+<nav class="navbar">
+    <ul class="link-group" id="msgText">
+        <li class="link"><a href="index.php">Главная</a></li>
+        <li class="link"><a href="about_me.php">Обо мне</a></li>
+        <li class="link"><a href="contact_info.php">Контактная Информация</a></li>
+        <li class="link active"><a href="galerey.php">Галерея</a></li>
+        <li class="link"><a href="mldm.php">Лабораторные Млидм</a></li>
+        <?php
+        if($_COOKIE['user']==''):?>
+        <li class="link"><a href="userenter.php">Вход/Регистрация</a></li>
+        <?php else:?>
+        <li class="link"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
     <?php endif;?>
-    </div>
+    </ul>
+</nav>
     <div class="gallereymain">
+        <div class="row">
         <div class="replaceimg" onclick="leftChangeImage()"><img src="img\suka.png"></div>
-            <div id="mainImage"></div>
+        <div id="mainImage"></div>
         <div class="replaceimg1" onclick="rightChangeImage()"><img src="img\suka.png"></div>
+        </div>
+        <div class="imgl">
+        <div class="listimg" onclick="idChangeImage(1)"><img src="img\1.jpg"></div>
+        <div class="listimg" onclick="idChangeImage(2)"><img src="img\2.jpg"></div>
+        <div class="listimg" onclick="idChangeImage(3)"><img src="img\3.jpg"></div>
+        </div>
     </div>
+   
+    
+</div>
 </body>
 
 </html>

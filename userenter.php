@@ -8,33 +8,33 @@
 </head>
 
 <body>
-<div class="head">
-     
-    <div class="headText">
-    Вход/Регистрация
-    </div>
-    <a href="userenter.php"><div class="user">
-    </div>
-    </a>
-</div>
+<nav class="navbar" id="msgText">
+    <ul class="link-group">
+        <li class="link"><a href="index.php">Главная</a></li>
+        <li class="link"><a href="about_me.php">Обо мне</a></li>
+        <li class="link"><a href="contact_info.php">Контактная Информация</a></li>
+        <li class="link"><a href="galerey.php">Галерея</a></li>
+        <li class="link"><a href="mldm.php">Лабораторные Млидм</a></li>
+        <?php
+        if($_COOKIE['user']==''):?>
+        <li class="link active"><a href="userenter.php">Вход/Регистрация</a></li>
+        <?php else:?>
+        <li class="link"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+    <?php endif;?>
+    </ul>
+</nav>
 
 <div class="container">
-    Регистрация
-    <form action="check.php" method="post" enctype="multipart/form-data" class="inputblock">
-        <input type="text"  placeholder="Логин" class="textarea" name="login" id="login"/>
-        <input type="text"  placeholder="Имя" class="textarea" name="name" id="name"/>
-        <input type="password"  placeholder="Пароль" class="textarea" name="password" id="password"/>
-            Аватарка
-        <input type="file" class="file" name="img_upload" id="img_upload"/>
-        <button class="regbutton" type="submit">Зарегестрироваться</button>
-    </form>
     Вход
     <form action="auth.php" method="post" class="inputblock">
         <input type="text"  placeholder="Логин" class="textarea" name="login" id="login"/>
         <input type="password"  placeholder="Пароль" class="textarea" name="password" id="password"/>
-        <button class="regbutton" type="submit">Вход</button>
+        <button class="regbutton" type="submit">Войти</button>
     </form>
-    
+    <div class="quest">
+    Ещё не Зарегестрирован?<br>
+    <a href="userreg.php">Зарегестрироваться</a>
+    </div>
 </div>
 </body>
 

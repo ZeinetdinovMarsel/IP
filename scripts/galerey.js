@@ -4,14 +4,14 @@ const countdiv=100;
 const speed=10;
 
 function genImg(){
-  let widthdiv=500/countdiv;
+  let widthdiv=450/countdiv;
   let img="img/"+numimg+".jpg";
   for(let i=0;i<countdiv;i++){
     let item=$("<div></div>");
     item.addClass("uwu");
     item.css("width",widthdiv+"px");
     item.css("background-image",'url('+img+')');
-    item.css("background-size",'500px');
+    item.css("background-size",'450px');
     item.css("background-position-x",-i*widthdiv+"px");
     $("#mainImage").append(item);
     
@@ -42,6 +42,11 @@ function rightChangeImage(){
     numimg=1;
   changeImg();
 }
+function idChangeImage(id){
+  numimg=id;
+  changeImg();
+}
 $(document).ready(function(){
   genImg();
 })
+

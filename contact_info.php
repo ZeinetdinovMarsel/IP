@@ -8,21 +8,22 @@
 
 <body>
 <div>
-    <div class="head">
-        <div class="headText">
-            Контактная информация
-        </div>
+<nav class="navbar">
+    <ul class="link-group" id="msgText">
+        <li class="link"><a href="index.php">Главная</a></li>
+        <li class="link"><a href="about_me.php">Обо мне</a></li>
+        <li class="link active"><a href="contact_info.php">Контактная Информация</a></li>
+        <li class="link"><a href="galerey.php">Галерея</a></li>
+        <li class="link"><a href="mldm.php">Лабораторные Млидм</a></li>
         <?php
-        if($_COOKIE['user']==''):
-    ?>
-    <a href="userenter.php"><div class="user">
-        Вход/Регистрация
-    </div>
-    </a>
-    <?php else:?>
-        <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+        if($_COOKIE['user']==''):?>
+        <li class="link"><a href="userenter.php">Вход/Регистрация</a></li>
+        <?php else:?>
+        <li class="link"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
     <?php endif;?>
-    </div>
+    </ul>
+</nav>
+<div class="block">
 <div class="blockinf">
     <div class="icons">
         <div class="gmail">
@@ -42,10 +43,6 @@
         </div>
     </div>
 <div class="soc">
-    <div class="line3text">
-        Соц сети и прочее
-        <div class="line3"></div>
-    </div>
     <div class="socic">
 
         <tr>
@@ -69,6 +66,7 @@
 
 </div>
 </div>        
+</div>
 </div>
 
 </body>

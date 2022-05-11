@@ -31,10 +31,10 @@
  exit();
  } 
 
- $mysql->query("UPDATE `users` SET `login` = '$login' WHERE `users`.`login` = '$log'");
  $mysql->query("UPDATE `users` SET `name` = '$name' WHERE `users`.`login` = '$log'");
  $mysql->query("UPDATE `users` SET `password` = '$password' WHERE `users`.`login` = '$log'");
  $mysql->query("UPDATE `users` SET `image` = '$image' WHERE `users`.`login` = '$log'");
+ $mysql->query("UPDATE `users` SET `login` = '$login' WHERE `users`.`login` = '$log'");
  
  $mysql->close();
  header('Location:/adminpage.php')

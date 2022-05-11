@@ -1,4 +1,4 @@
-const mouseTarget = document.getElementById('mouseTarget');
+const mouseTarget = document.getElementById('home-img');
 
 mouseTarget.addEventListener('mouseenter', e => {
   mouseTarget.style.background = 'url("../img/harambe.gif") center';

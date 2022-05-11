@@ -8,60 +8,29 @@
 </head>
 
 <body>
-    <div>
-<div class="head">
-     
-    <div class="headText">
-    Harambe Dev
-    </div>
-    <?php
-        if($_COOKIE['user']==''):
-    ?>
-    <a href="userenter.php" class="user"><div class="user">
-        Вход/Регистрация
-    </div>
-    </a>
-    <?php else:?>
-        <div class="username">Пользователь:<a href="userpage.php" class="username"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
+
+<nav class="navbar" id="msgText">
+    <ul class="link-group">
+        <li class="link active"><a href="index.php">Главная</a></li>
+        <li class="link"><a href="about_me.php">Обо мне</a></li>
+        <li class="link"><a href="contact_info.php">Контактная Информация</a></li>
+        <li class="link"><a href="galerey.php">Галерея</a></li>
+        <li class="link"><a href="mldm.php">Лабораторные Млидм</a></li>
+        <?php
+        if($_COOKIE['user']==''):?>
+        <li class="link"><a href="userenter.php">Вход/Регистрация</a></li>
+        <?php else:?>
+        <li class="link"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
     <?php endif;?>
-</div>
-<div class="mainBlockin">
-<div id='mouseTarget'>
-</div>
-<div class="line">
-</div>
-<div class="buttons">
-<a href="about_me.php" class="buttontext"><div class="button1">
-        <div class="buttontextlight">
-            Обо мне
-        </div>
-</div>
-</a>
+    </ul>
+</nav>
 
-<a href="contact_info.php" class="buttontext">
-    <div class="button1">
-        <div class="buttontext">
-            Кон&#8203;такт&#8203;ная<br>Ин&#8203;фор&#8203;ма&#8203;ция
-        </div>
-        </div>
-</a>
-
-<a href="mldm.php" class="buttontext"><div class="button1">
-    <div class="buttontext">
-            Ла&#8203;бо&#8203;ра&#8203;тор&#8203;ные ра&#8203;бо&#8203;ты МЛИДМ
-        </div>
-</div>
-</a>
-
-<a href="galerey.php" class="buttontext"><div class="button1">
-    <div class="buttontextlight">
-        Галерея
-    </div>
-</div>
-</a>
-</div>
-</div>
-</div>
+<section class="home-section active">
+    <div><h1 class="hero-heading">Добро пожаловать<br>на мой сайт</h1></div>
+    <div id="home-img"></div>
+</section>
+<!-- <div id='mouseTarget'>
+</div> -->
 <script type="text/javascript" src="scripts/indexscripts.js"></script>
 </body>
 
