@@ -23,7 +23,7 @@
 
  $password=md5($password."zxcghoul");
 
- $mysql= new mysqli('localhost','root','root','register-bd');
+ $mysql= new mysqli('localhost','root','','register-bd');
  if ($sql=$mysql->query("SELECT * FROM `users` WHERE `login`='$login'") and $sql->num_rows>0)
  { 
  echo "Пользователь с таким логином уже существет"; 

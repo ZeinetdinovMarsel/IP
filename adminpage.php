@@ -38,7 +38,7 @@
         <button class="addbutton" type="submit" id="add" name="add">Добавить пользователя</button>
     </form>
     <?php
-     $link= new mysqli('localhost','root','root','register-bd');
+     $link= new mysqli('localhost','root','','register-bd');
      if(isset($_GET['del'])){
         $log=$_GET['del'];
          $query="DELETE FROM `users` WHERE `login`='$log'";

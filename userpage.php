@@ -30,7 +30,7 @@
 <div class="userImage">
     <?php
     $login=$_COOKIE['login'];
-    $mysql= new mysqli('localhost','root','root','register-bd');
+    $mysql= new mysqli('localhost','root','','register-bd');
     $result=$mysql->query("SELECT * FROM `users` WHERE `login`='$login'");
     $user=$result->fetch_assoc();
     $image=base64_encode($user['image']);

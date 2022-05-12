@@ -23,14 +23,13 @@
 
  $password=md5($password."zxcghoul");
 
- $mysql= new mysqli('localhost','root','root','register-bd');
- if ($sql=$mysql->query("SELECT * FROM `users` WHERE `login`='$login'") and $sql->num_rows>0 and $login!=$log)
+ $mysql= new mysqli('localhost','root','','register-bd');
+ if (($mysql->query("SELECT count(*) FROM `users` WHERE `login`='$login'")) > 0 and $login!=$log)
  { 
- echo "Пользователь с таким логином уже существет"; 
- $mysql->close();
- exit();
+     echo "Пользователь с таким логином уже существет"; 
+     $mysql->close();
+     exit();
  } 
-
  $mysql->query("UPDATE `users` SET `name` = '$name' WHERE `users`.`login` = '$log'");
  $mysql->query("UPDATE `users` SET `password` = '$password' WHERE `users`.`login` = '$log'");
  $mysql->query("UPDATE `users` SET `image` = '$image' WHERE `users`.`login` = '$log'");

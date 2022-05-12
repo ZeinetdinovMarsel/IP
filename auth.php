@@ -4,7 +4,7 @@
  $admin;
  $password=md5($password."zxcghoul");
 
- $mysql= new mysqli('localhost','root','root','register-bd');
+ $mysql= new mysqli('localhost','root','','register-bd');
  
  $result=$mysql->query("SELECT * FROM `users` WHERE `login`='$login' AND `password`='$password' ");
 
