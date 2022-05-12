@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lab2</title>
 </head>
 <body>
         <h1>Вторая лаба</h1>

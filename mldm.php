@@ -62,14 +62,15 @@
             </div>
         </div>
         <div class="project-card">
-            <img src="img/harambe.gif" class="project-img" alt="">
+            <img src="img/lab4.gif" class="project-img" alt="">
             <div class="project-content">
                 <h1 class="project-title">Четвертая лабораторная</h1>
                 <p class="project-info">
-                В разработке..     
+                Разработать программу на php нахождения кратчайшего пути в графе.При выводе необходимо показывать весь маршрут, путем перечисления вершин и суммарная стоимость пути.            
+
                 <div class="project-btn-grp">
                 <a href="https://github.com/ZeinetdinovMarsel/MLDM"><button class="project-btn github">github</button></a>
-                <a href="#"><button class="project-btn live">Запустить</button></a>
+                <a href="mldmlab4.php"><button class="project-btn live">Запустить</button></a>
                 </div>  
             </div>
         </div>
@@ -78,8 +79,8 @@
             <div class="project-content">
                 <h1 class="project-title">Пятая лабораторная</h1>
                 <p class="project-info">
-                В разработке..               
-                <div class="project-btn-grp">
+                    В разработке..
+                                <div class="project-btn-grp">
                 <a href="https://github.com/ZeinetdinovMarsel/MLDM"><button class="project-btn github">github</button></a>
                 <a href="#"><button class="project-btn live">Запустить</button></a>
                 </div>

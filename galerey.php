@@ -27,9 +27,9 @@
 </nav>
     <div class="gallereymain">
         <div class="row">
-        <div class="replaceimg" onclick="leftChangeImage()"><img src="img\suka.png"></div>
+        <div class="replaceimg" onclick="leftChangeImage()"><img src="img\strela.png"></div>
         <div id="mainImage"></div>
-        <div class="replaceimg1" onclick="rightChangeImage()"><img src="img\suka.png"></div>
+        <div class="replaceimg1" onclick="rightChangeImage()"><img src="img\strela.png"></div>
         </div>
         <div class="imgl">
         <div class="listimg" onclick="idChangeImage(1)"><img src="img\1.jpg"></div>
