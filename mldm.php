@@ -75,14 +75,14 @@
             </div>
         </div>
         <div class="project-card">
-            <img src="img/harambe.gif" class="project-img" alt="">
+            <img src="img/lab5.gif" class="project-img" alt="">
             <div class="project-content">
                 <h1 class="project-title">Пятая лабораторная</h1>
                 <p class="project-info">
-                    В разработке..
-                                <div class="project-btn-grp">
+                    Разработать программу на php  нахождения матрицы достижимости. 
+                <div class="project-btn-grp">
                 <a href="https://github.com/ZeinetdinovMarsel/MLDM"><button class="project-btn github">github</button></a>
-                <a href="#"><button class="project-btn live">Запустить</button></a>
+                <a href="mldmlab5.php"><button class="project-btn live">Запустить</button></a>
                 </div>
             </div>
         </div>
