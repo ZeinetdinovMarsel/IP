@@ -25,12 +25,12 @@ $password=md5($password."zxcghoul");
 
 $mysql= new mysqli('localhost','root','','register-bd');
 
-if (($mysql->query("SELECT count(*) FROM `users` WHERE `login`='$login'")) > 0)
-{ 
+ if ($sql=$mysql->query("SELECT * FROM `users` WHERE `login`='$login'") and $sql->num_rows>0)
+    { 
     echo "Пользователь с таким логином уже существет"; 
     $mysql->close();
     exit();
-} 
+ } 
  $image=addslashes(file_get_contents($_FILES['img_upload']['tmp_name']));
 
  $password=md5($password."zxcghoul");
