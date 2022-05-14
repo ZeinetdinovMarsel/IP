@@ -60,7 +60,7 @@ function firsttosec(mass3){
         let count=0;
         for(let j=0; j<4;j++)
             if(mass3[i][j]==1){count++;};
-        if(count>1)
+        if(count!=1)
             return "Не является функцией первого множества во второе";
     }
     return "Является функцией первого множества во второе";
@@ -72,7 +72,7 @@ function sectofirst(mass3){
         let count=0;
         for(let i=0; i<4;i++)
             if(mass3[i][j]==1){count++;};
-            if(count>1)
+            if(count!=1)
             return "Не является функцией второго множества в первое";
     }
     return "Является функцией второго множества в первое";

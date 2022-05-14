@@ -24,7 +24,7 @@ else if(mb_strlen($password)<2 || mb_strlen($password)>12){
     $mysql->close();
  }
  if($_SESSION['error']!=""){
-  header('Location:/update.php?id='.$log);
+  header('Location:/updateuser.php?id='.$log);
   exit();
 } 
  $mysql->query("UPDATE `users` SET `name` = '$name' WHERE `users`.`login` = '$log'");
@@ -36,5 +36,19 @@ else if(mb_strlen($password)<2 || mb_strlen($password)>12){
  $mysql->query("UPDATE `users` SET `login` = '$login' WHERE `users`.`login` = '$log'");
  
  $mysql->close();
- header('Location:/adminpage.php');
+
+
+ setcookie('user',$user['name'],time()-3600,"/");
+ setcookie('login',$user['login'],time()-3600,"/");
+ setcookie('admin',$user['admin'],time()-3600,"/");
+
+ $mysql= new mysqli('localhost','root','','register-bd');
+ $result=$mysql->query("SELECT * FROM `users` WHERE `login`='$login' AND `password`='$password' ");
+ $user=$result->fetch_assoc();
+
+ setcookie('user',$user['name'],time()+3600,"/");
+ setcookie('login',$user['login'],time()+3600,"/");
+ setcookie('admin',$user['admin'],time()+3600,"/");
+ 
+ header('Location:/userpage.php');
 ?>

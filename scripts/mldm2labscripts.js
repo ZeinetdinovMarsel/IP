@@ -64,7 +64,7 @@ function symmetr(mass){
         for(let j = 0; j < 4; j++)
             if(mass[i][j] != mass[j][i] ){return "Функция не симметричная";};
     }
-    return "Функция не симметричная";
+    return "Функция симметричная";
 }
 function cosymmetr(mass){
     var refl="";

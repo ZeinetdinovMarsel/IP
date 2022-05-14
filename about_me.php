@@ -7,8 +7,12 @@
 </head>
 
 <body>
-<nav class="navbar">
-    <ul class="link-group" id="msgText">
+<nav class="navbar" id="msgText">
+<div class="link-group-burger">
+    <span></span>
+</div>
+<div class="link-group">
+    <ul class="link-group">
         <li class="link"><a href="index.php">Главная</a></li>
         <li class="link active"><a href="about_me.php">Обо мне</a></li>
         <li class="link"><a href="contact_info.php">Контактная Информация</a></li>
@@ -21,7 +25,8 @@
         <li class="link"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
     <?php endif;?>
     </ul>
-    </nav>
+    </div>
+</nav>
 
 <section class="about-section">
 
@@ -30,6 +35,7 @@
             
 </div>
 </section>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/burger.js"></script>
 </body>
 </html>

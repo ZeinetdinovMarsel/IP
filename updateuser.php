@@ -36,12 +36,12 @@
         $log=$_GET['id'];
         $result=$link->query("SELECT * FROM `users` WHERE `login`='$log'");
         $data=$result->fetch_assoc();
-        if($_COOKIE['admin']==1):
+        if($_COOKIE['admin']!=1):
     ?>
 <div class="cont">
     <div class="adminpanel">
 
-    <form action="adminedit.php?id=<?print($data['login'])?>" method="post" enctype="multipart/form-data" class="admininput">
+    <form action="useredit.php?id=<?print($data['login'])?>" method="post" enctype="multipart/form-data" class="admininput">
     Изменить пользователя с логином <?print($data['login'])?> 
         <input type="text" value="<?print($data['login'])?>"  placeholder="Новый логин" class="textarea" name="login" id="login"/>
         <input type="text" value="<?print($data['name'])?>" placeholder="Новое имя" class="textarea" name="name" id="name"/>
@@ -50,14 +50,14 @@
         <input type="file" class="file" name="img_upload" id="img_upload"/>
         <div class="errortxt"> <?php 
             if (!empty($_SESSION['error'])) {
-                echo '<p>Ошибка ввода: '.$_SESSION['error'].'</p>';
+                echo '<p>Ошибка регистрации: '.$_SESSION['error'].'</p>';
             }
             unset($_SESSION['error']);
             ?></div>
         <button class="addbutton" type="submit" id="add" name="add">Изменить пользователя</button>
     </form>
     <?php else:?>
-        Данный пользователь не является админом
+        Данный пользователь является админом
     <?php endif;?>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

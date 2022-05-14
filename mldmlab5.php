@@ -9,7 +9,7 @@
 <body>
         <h1>Пятая лаба</h1>
         <form method="post" action="/scripts/mldm5labscripts.php">
-        <textarea name="mass" placeholder="Введите матрицу смежности графа n*n"></textarea><br><br>
+        <textarea name="mass" placeholder="Введите матрицу смежности графа n*n" style="height: 94px; width: 161px;"></textarea><br><br>
         <input type="submit" value="Подтвердить"><br>
         <p>Пример ввода:<br><br>
             0 4 1<br>

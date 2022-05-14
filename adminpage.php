@@ -9,6 +9,10 @@
 
 <body>
 <nav class="navbar" id="msgText">
+<div class="link-group-burger">
+    <span></span>
+</div>
+<div class="link-group">
     <ul class="link-group">
         <li class="link"><a href="index.php">Главная</a></li>
         <li class="link"><a href="about_me.php">Обо мне</a></li>
@@ -22,35 +26,22 @@
         <li class="link active"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
     <?php endif;?>
     </ul>
+    </div>
 </nav>
 
 <div class="cont">
     
 <?php if($_COOKIE['admin']==1):?>
     <div class="adminpanel">
-    <form action="adminadd.php" method="post" enctype="multipart/form-data" class="admininput">
-        Пользователь    
-        <input type="text"  placeholder="Логин" class="textarea" name="login" id="login"/>
-        <input type="text"  placeholder="Имя" class="textarea" name="name" id="name"/>
-        <input type="password"  placeholder="Пароль" class="textarea" name="password" id="password"/>
-            Аватарка
-        <input type="file" class="file" name="img_upload" id="img_upload"/>
-        <button class="addbutton" type="submit" id="add" name="add">Добавить пользователя</button>
-    </form>
     <?php
-     $link= new mysqli('localhost','root','','register-bd');
-     if(isset($_GET['del'])){
-        $log=$_GET['del'];
-         $query="DELETE FROM `users` WHERE `login`='$log'";
-         mysqli_query($link,$query);
-     }
-     $result=$link->query("SELECT * FROM `users`");
-     for($data=[];$row=$result->fetch_assoc();){
-        if($row['login']!="admin"){
-            $data[]=$row;
+        $link= new mysqli('localhost','root','','register-bd');
+        $result=$link->query("SELECT * FROM `users`");
+        for($data=[];$row=$result->fetch_assoc();){
+           if($row['login']!="admin"){
+               $data[]=$row;
+           }
         }
-     };
-     ?>
+    ?>
      
      <table>
      <div class="tabletext">
@@ -67,11 +58,38 @@
             <td><a href="update.php?id=<?=$user['login']?>">Изменить</a></td>
         </tr>
         <?php }?>
-     </table>
+        
+     </table> 
+     <div class="deleteform">  
+     <?php
+        if(isset($_GET['del'])){
+            print("Вы точно хотите удалить пользователя ".$_GET['del']." ?");
+        ?>
+        
+        <form action="delete.php?del=<?=$_GET['del']?>" method="post">
+            <button type="submit" name="confirm_del" value="1" class="deletebut">ДА</button>
+            <button type="submit" name="confirm_del" value="0" class="deletebut">НЕТ</button>
+        </form>
+    <?php
+        }
+        else if(!isset($_GET['delid'])){
+            print("Вы ещё никого не трогали");
+        }
+        else if($_GET['delid']==1){
+            print("Вы удалили пользователя");
+        }
+        else if($_GET['delid']==0){
+            print("Вы пощадили пользователя");
+        }
+        
+        ?>
+        </div> 
     <?php else:?>
         Данный пользователь не является админом
     <?php endif;?>
-
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/burger.js"></script>
 </body>
 
 </html>
