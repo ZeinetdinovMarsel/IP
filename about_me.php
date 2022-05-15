@@ -22,6 +22,7 @@
         if($_COOKIE['user']==''):?>
         <li class="link"><a href="userenter.php">Вход/Регистрация</a></li>
         <?php else:?>
+        <li class="link"><a href="game.php">Игра</a>
         <li class="link"><a href="userpage.php"><?=$_COOKIE['user']?></a> <a href="/exit.php">Выход</a></div>
     <?php endif;?>
     </ul>

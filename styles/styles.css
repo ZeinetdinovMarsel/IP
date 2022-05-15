@@ -284,7 +284,7 @@ body{
 }
 .uwu{
 
-    height:450px;
+    height:500px;
     display: inline-flex;
     
     background-repeat:no-repeat;
@@ -447,7 +447,7 @@ body{
     border-radius: 6vmin;
 }
 .userinfo{
-    margin-top: 9vh;
+    margin-top: 4vh;
     font-size: 3.5vmin;
     font-family:'Segoe UI';
     text-align: left;
@@ -592,7 +592,7 @@ td{
     width: 88%;
     position:absolute;
     left: 10vw;
-    top: 10vh;
+    top: 5vh;
     opacity: 1;
     transition: 1s;
 }
@@ -615,4 +615,79 @@ td{
     margin: 2vmin;
     border-radius: 5vmin;
 
+}
+/*
+Игра
+*/
+.allcont{
+    width: 50%;
+    height: 100%;;
+    position: fixed;
+    left:25%;
+    text-align: center;
+    align-items: center;    
+    justify-content: center;
+}
+.gamecont{
+    position: relative;
+    top:15%;
+    text-align: center;
+    align-items: center;    
+    justify-content: center;
+}
+.gameheadtext{
+    text-align: center;
+    font-size: 5vmin;
+    color: rgb(255, 255, 255);
+}
+.gameinfotext{
+    width: 50%;
+    margin: 2vmin;
+    text-align:justify;
+    position:relative;
+    font-size: 2vmin;
+    color: rgb(255, 255, 255);
+}
+.imgdaltest{
+    max-width: 500px;
+    max-height: 500px;
+    position: relative;
+    width:45vmin;
+    height:45vmin;
+    margin: 2vmin;
+    border-radius: 5vmin;
+}
+.startbutton{
+    text-decoration: none;
+    margin-bottom: 4.5vh;
+    background-color: green;
+    color: white;
+    padding: 1vmin;
+    font-size: 3vmin;
+    border: 0.2vmin solid white;
+    border-radius: 1.5vmin;
+}
+.startbutton:hover{
+    background-color: rgb(1, 87, 1);
+}
+.numans{
+    margin: 2vmin;
+    color: white;
+    text-align: center;
+    font-size: 2.5vmin;
+}
+.question{
+    color: white;
+    text-align: center;
+    font-size: 3vmin;
+}
+.final{
+    margin: 2vmin;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    line-height: 4vh;
+    color: white;
+    text-align:center;
+    font-size: 3vmin;
 }
