@@ -1,4 +1,5 @@
 <?php
+include_once $_SERVER['DOCUMENT_ROOT']."/db.class.php";
 session_start();
 $login=filter_var(trim($_POST['login']),FILTER_SANITIZE_STRING);
 $name=filter_var(trim($_POST['name']),FILTER_SANITIZE_STRING);
@@ -23,19 +24,28 @@ else if(empty($_FILES['img_upload']['tmp_name'])){
 
 $mysql= new mysqli('localhost','root','','register-bd');
 
- if ($sql=$mysql->query("SELECT * FROM `users` WHERE `login`='$login'") and $sql->num_rows>0)
-    { 
-   $_SESSION['error'] ="Пользователь с таким логином уже существет"; 
- }
+DB::getInstance();
+   $login = htmlspecialchars($_POST['login']);
+
+
+   $query = "SELECT * FROM users WHERE login = '$login'";
+   $res = DB::query($query);
+
+   if (($item = DB::fetch_array($res)) == true) {
+      if ($chooseUserLogin != $item['login']) {
+        $_SESSION['error'] ="Данный логин уже занят";
+   }
+   }
  if($_SESSION['error']!=""){
    header('Location:/userreg.php');
    exit();
 } 
- $image=addslashes(file_get_contents($_FILES['img_upload']['tmp_name']));
+ $path='upload/avatars/'.time().$_FILES['img_upload']['name'];
+ move_uploaded_file($_FILES['img_upload']['tmp_name'],$path);
 
  $password=md5($password."zxcghoul");
 
- $mysql->query("INSERT INTO `users`(`login`,`password`,`name`,`image`) VALUES('$login','$password','$name','$image')");
+ $mysql->query("INSERT INTO `users`(`login`,`password`,`name`,`image`) VALUES('$login','$password','$name','$path')");
  $mysql->close();
  header('Location:/userenter.php');
 ?>

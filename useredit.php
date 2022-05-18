@@ -41,6 +41,7 @@ else if(mb_strlen($password)<2 || mb_strlen($password)>12){
  setcookie('user',$user['name'],time()-3600,"/");
  setcookie('login',$user['login'],time()-3600,"/");
  setcookie('admin',$user['admin'],time()-3600,"/");
+ setcookie('admin',$user['admin'],time()-3600,"/");
 
  $mysql= new mysqli('localhost','root','','register-bd');
  $result=$mysql->query("SELECT * FROM `users` WHERE `login`='$login' AND `password`='$password' ");
@@ -49,6 +50,7 @@ else if(mb_strlen($password)<2 || mb_strlen($password)>12){
  setcookie('user',$user['name'],time()+3600,"/");
  setcookie('login',$user['login'],time()+3600,"/");
  setcookie('admin',$user['admin'],time()+3600,"/");
- 
+ setcookie('image',$user['image'],time()+3600,"/");
+
  header('Location:/userpage.php');
 ?>

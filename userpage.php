@@ -32,20 +32,13 @@
 <div class="cont1">
     
 <div class="userImage">
-    <?php
-    $login=$_COOKIE['login'];
-    $mysql= new mysqli('localhost','root','','register-bd');
-    $result=$mysql->query("SELECT * FROM `users` WHERE `login`='$login'");
-    $user=$result->fetch_assoc();
-    $image=base64_encode($user['image']);
-    ?>
-    <img src="data:image/jpeg;base64, <?php echo $image?>" alt="">
+    <img src="<?php echo $_COOKIE['image']?>" alt="">
 </div>
 <div class="userinfo">
     Имя: <?=$_COOKIE['user']?><br>
     Логин: <?=$_COOKIE['login']?><br>
-    Итог последней попытки: <?print($user['gamescore'])?> из 13 вопросов<br>
-    Лучший счёт: <?print($user['highscore'])?> из 13 вопросов<br>
+    Итог последней попытки: <?=$_COOKIE['gamescore']?> из 13 вопросов<br>
+    Лучший счёт: <?=$_COOKIE['highscore']?> из 13 вопросов<br>
     admin: 
     <?php if($_COOKIE['admin']==0):?>
         Нет<br>

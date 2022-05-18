@@ -9,8 +9,6 @@
  
  $result=$mysql->query("SELECT * FROM `users` WHERE `login`='$login' AND `password`='$password' ");
 
-
-
  $user=$result->fetch_assoc();
  if(count($user)==0){
    $_SESSION['error'] ="Пользователь не найден";
@@ -21,6 +19,9 @@
 
  setcookie('login',$user['login'],time()+3600,"/");
  setcookie('admin',$user['admin'],time()+3600,"/");
+ setcookie('image',$user['image'],time()+3600,"/");
+ setcookie('gamescore',$user['gamescore'],time()+3600,"/");
+ setcookie('highscore',$user['highscore'],time()+3600,"/");
  
  $mysql->close();
  header('Location:/index.php')

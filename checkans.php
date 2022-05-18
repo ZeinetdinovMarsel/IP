@@ -22,6 +22,10 @@
         $mysql->query("UPDATE `users` SET `highscore` = '$count' WHERE `users`.`login` = '$userlogin'");
     }
  }
+ setcookie('gamescore',$user['gamescore'],time()-3600,"/");
+ setcookie('highscore',$user['highscore'],time()-3600,"/");
+ setcookie('gamescore',$user['gamescore'],time()+3600,"/");
+ setcookie('highscore',$user['highscore'],time()+3600,"/");
  $id=$id+1;
  header('Location:/game.php?game='.$id);
 ?>

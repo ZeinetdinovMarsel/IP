@@ -39,10 +39,10 @@
     Тест на дальтонизм
 </div>
     <?php
+    $link= new mysqli('localhost','root','','register-bd');
     if(isset($_GET['start'])){
         if($_COOKIE['login']!=NULL){
             $log=$_COOKIE['login'];
-            $link= new mysqli('localhost','root','','register-bd');
             $link->query("UPDATE `users` SET `gamescore` = '0' WHERE `users`.`login` = '$log'");
         }
         else{
@@ -55,14 +55,12 @@
     if(isset($_GET['game'])){
         $id=$_GET['game'];
         if($_GET['game']!=14){
-        $link= new mysqli('localhost','root','','register-bd');
         $result=$link->query("SELECT * FROM `game` WHERE id=$id");
         $game=$result->fetch_assoc();
-        $image=base64_encode($game['idimage']);
     ?>
-    <img src="data:image/jpeg;base64, <?php echo $image?>" class="imgdaltest" alt="">
+    <img src="gameimg/<?echo $_GET['game']?>.jpg" class="imgdaltest" alt="">
     <br>
-    <div class=question>
+    <div class="question">
     <?php
     print($game['idquestion']."<br>Если ничего не видите оставьте поле пустым<br>");
     ?>
@@ -82,7 +80,6 @@
     }
     elseif($_GET['game']==13){
         print("1) круг и квадрат  2) треугольник  3) треугольник и круг<br>4) Квадрат и треугольник");
-
     }
     ?>
     <form action="checkans.php?game=<?print($game['id'])?>" method="post" enctype="multipart/form-data">
@@ -93,7 +90,6 @@
     }
     else{
         $log=$_COOKIE['login'];
-        $link= new mysqli('localhost','root','','register-bd');
         $end=$link->query("SELECT * FROM `users` WHERE `login`='$log'");
         $endmas=$end->fetch_assoc();
         ?>
