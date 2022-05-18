@@ -51,8 +51,9 @@ class DB {
 
     //mysql_insert_id() возвращает ID,
     //сгенерированный колонкой с AUTO_INCREMENT последним запросом INSERT к серверу
-    public static function insert_id()
-    {
-        return @mysqli_insert_id();
-    }
+    // public static function insert_id()
+    // {
+    //     return @mysqli_insert_id();
+    // }
 }
+DB::getInstance();
