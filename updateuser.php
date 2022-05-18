@@ -1,4 +1,5 @@
 <?php
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/db.class.php";
     session_start();
 ?>
 <!DOCTYPE html>
@@ -33,9 +34,8 @@
     </div>
 </nav>
 <?php
-        $link= new mysqli('localhost','root','','register-bd');
         $log=$_GET['id'];
-        $result=$link->query("SELECT * FROM `users` WHERE `login`='$log'");
+        $result=DB::query("SELECT * FROM `users` WHERE `login`='$log'");
         $data=$result->fetch_assoc();
         if($_COOKIE['admin']!=1):
     ?>

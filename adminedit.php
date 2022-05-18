@@ -39,4 +39,4 @@ if (!empty($_FILES['img_upload']['tmp_name'])) {
 }
 DB::query("UPDATE `users` SET `login` = '$login' WHERE `users`.`login` = '$log'");
 
-header('Location:/adminpage.php');
+header('Location:/adminpage.php?delid=2');
