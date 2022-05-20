@@ -43,15 +43,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/db.class.php";
                 Тест на дальтонизм
             </div>
             <?php
-            if (isset($_GET['start'])) {
                 if ($_COOKIE['login'] != NULL) {
-                    $log = $_COOKIE['login'];
-                    DB::query("UPDATE `users` SET `gamescore` = '0' WHERE `users`.`login` = '$log'");
                 } else {
                     print("Пользователь не авторизован");
                     exit();
                 }
-            }
             ?>
             <?php
             if (isset($_GET['game'])) {

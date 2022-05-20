@@ -278,7 +278,6 @@ body{
 #mainImage{
     overflow: hidden;
     position: relative;
-    width: 550x;
     white-space:nowrap;
     border: 2vmin groove rgb(172, 172, 172) ;
 }
