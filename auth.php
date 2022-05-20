@@ -11,7 +11,7 @@ $result = DB::query("SELECT * FROM `users` WHERE `login`='$login' AND `password`
 $user = $result->fetch_assoc();
 if (count($user) == 0) {
   $_SESSION['error'] = "Пользователь не найден";
-  header('Location:/userenter.php');
+  header('Location:/userenter.php?login=' . $login);
   exit();
 }
 setcookie('user', $user['name'], time() + 3600, "/");

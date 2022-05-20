@@ -487,11 +487,11 @@ body{
     text-align: center;
     background-color: rgb(124, 241, 150);
 }
-table{
+.admintable{
     width: 20vw;
     background-color: white;
 }
-td{
+.admintd{
     border: 0.1vmin solid black;
     text-align: center;
     background-color: white;
@@ -618,6 +618,10 @@ td{
 /*
 Игра
 */
+.answers{
+    display: flex;
+    justify-content: center;
+}
 .allcont{
     width: 50%;
     height: 100%;;
@@ -667,7 +671,26 @@ td{
     border-radius: 1.5vmin;
 }
 .startbutton:hover{
+    transition: 0.4s;
     background-color: rgb(1, 87, 1);
+}
+.answbutton{
+    max-width: 20vw;
+    max-height: 8vh;
+    min-height: 8vh;
+    min-width: 20vw;
+    text-decoration: none;
+    margin:0 1vmin 1vmin 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 1vmin;
+    font-size: 3vmin;
+    border: 0.2vmin solid rgb(0, 0, 0);
+    border-radius: 1.5vmin;
+}
+.answbutton:hover{
+    transition: 0.4s;
+    background-color: rgb(139, 139, 139);
 }
 .numans{
     margin: 2vmin;

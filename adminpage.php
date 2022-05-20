@@ -47,19 +47,19 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/db.class.php";
                 }
                 ?>
 
-                <table>
+                <table class="admintable">
                     <div class="tabletext">
                         Пользователи
                     </div>
                     <tr>
-                        <td>Логин</td>
-                        <td>Имя</td>
+                        <td class="admintd">Логин</td>
+                        <td class="admintd">Имя</td>
                         <?php foreach ($data as $user) { ?>
                     <tr>
-                        <td><?= $user['login'] ?></td>
-                        <td><?= $user['name'] ?></td>
-                        <td><a href="?del=<?= $user['login'] ?>">Удалить</a></td>
-                        <td><a href="update.php?id=<?= $user['login'] ?>">Изменить</a></td>
+                        <td class="admintd"><?= $user['login'] ?></td>
+                        <td class="admintd"><?= $user['name'] ?></td>
+                        <td class="admintd"><a href="?del=<?= $user['login'] ?>">Удалить</a></td>
+                        <td class="admintd"><a href="update.php?id=<?= $user['login'] ?>">Изменить</a></td>
                     </tr>
                 <?php } ?>
 

@@ -22,9 +22,9 @@ $query = "SELECT * FROM users WHERE login = '$login'";
 $res = DB::query($query);
 
 if (($item = DB::fetch_array($res)) == true && $login != $log) {
-   if ($chooseUserLogin != $item['login']) {
-      $_SESSION['error'] = "Данный логин уже занят";
-   }
+  if ($chooseUserLogin != $item['login']) {
+    $_SESSION['error'] = "Данный логин уже занят";
+  }
 }
 if ($_SESSION['error'] != "") {
   header('Location:/update.php?id=' . $log);

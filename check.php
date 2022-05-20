@@ -27,7 +27,7 @@ if (($item = DB::fetch_array($res)) == true) {
    }
 }
 if ($_SESSION['error'] != "") {
-   header('Location:/userreg.php');
+   header('Location:/userreg.php?login=' . $login . '&name=' . $name);
    exit();
 }
 $path = 'upload/avatars/' . time() . $_FILES['img_upload']['name'];
@@ -37,4 +37,3 @@ $password = md5($password . "zxcghoul");
 
 DB::query("INSERT INTO `users`(`login`,`password`,`name`,`image`) VALUES('$login','$password','$name','$path')");
 header('Location:/userenter.php');
-?>

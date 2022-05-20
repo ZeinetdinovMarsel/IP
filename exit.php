@@ -3,5 +3,4 @@
  setcookie('login',$user['login'],time()-3600,"/");
  setcookie('admin',$user['admin'],time()-3600,"/");
  setcookie('image',$user['image'],time()-3600,"/");
- header('Location:/')
-?>
+ header('Location:/');

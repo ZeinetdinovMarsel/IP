@@ -43,11 +43,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/db.class.php";
                 Тест на дальтонизм
             </div>
             <?php
-                if ($_COOKIE['login'] != NULL) {
-                } else {
-                    print("Пользователь не авторизован");
-                    exit();
-                }
+            if ($_COOKIE['login'] != NULL) {
+            } else {
+                print("Пользователь не авторизован");
+                exit();
+            }
+
             ?>
             <?php
             if (isset($_GET['game'])) {
@@ -60,25 +61,126 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/db.class.php";
                     <br>
                     <div class="question">
                         <?php
-                        print($game['idquestion'] . "<br>Если ничего не видите оставьте поле пустым<br>");
+                        print($game['idquestion'] . "<br>");
                         ?>
                     </div>
                     <div class="numans">
-                        <?php
-                        if ($_GET['game'] == 3) {
-                            print("1) круг и треугольник  2) квадрат и круг  3) треугольник  4) круг");
-                        } elseif ($_GET['game'] == 5) {
-                            print("1) круг и треугольник  2) квадрат и круг  3) треугольник  4) круг");
-                        } elseif ($_GET['game'] == 10) {
-                            print("1) круг, квадрат и треугольник  2) квадрат и круг  3) треугольник и квадрат  4) круг, пятиугольник и квадрат");
-                        } elseif ($_GET['game'] == 13) {
-                            print("1) круг и квадрат  2) треугольник  3) треугольник и круг<br>4) Квадрат и треугольник");
-                        }
-                        ?>
                         <form action="checkans.php?game=<? print($game['id']) ?>" method="post" enctype="multipart/form-data">
+                            <table class="answers">
+                                <?php
+                                if ($_GET['game'] == 3) {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="1" id="answer" name="answer">Круг и треугольник</button><br>
+                                            <button type="submit" class="answbutton" value="2" id="answer" name="answer">Квадрат и круг</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="3" id="answer" name="answer">Треугольник </button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+                                <?php
+                                } elseif ($_GET['game'] == 5) {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="1" id="answer" name="answer">Круг и треугольник</button><br>
+                                            <button type="submit" class="answbutton" value="2" id="answer" name="answer">Квадрат и круг</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="3" id="answer" name="answer">Треугольник </button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+                                <?php
+                                } elseif ($_GET['game'] == 10) {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="1" id="answer" name="answer">Круг, квадрат и треугольник</button><br>
+                                            <button type="submit" class="answbutton" value="2" id="answer" name="answer">Квадрат и круг</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="3" id="answer" name="answer">Треугольник и квадрат</button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+
+                                <?php
+                                } elseif ($_GET['game'] == 13) {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="1" id="answer" name="answer">Круг и квадрат</button><br>
+                                            <button type="submit" class="answbutton" value="2" id="answer" name="answer">Треугольник</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="3" id="answer" name="answer">Треугольник и круг</button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+                                <?php
+                                } else if ($_GET['game'] == 1) {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="96" id="answer" name="answer">96</button><br>
+                                            <button type="submit" class="answbutton" value="17" id="answer" name="answer">17</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="24" id="answer" name="answer">24</button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+                                <?php
+                                } else if ($_GET['game'] == 8 || $_GET['game'] == 9) {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="86" id="answer" name="answer">30</button><br>
+                                            <button type="submit" class="answbutton" value="136" id="answer" name="answer">136</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="360" id="answer" name="answer">360</button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+                                <?php
+                                } else if ($_GET['game'] == 11) {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="16" id="answer" name="answer">16</button><br>
+                                            <button type="submit" class="answbutton" value="14" id="answer" name="answer">14</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="36" id="answer" name="answer">36</button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+                                <?php
+                                } else {
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="9" id="answer" name="answer">9</button><br>
+                                            <button type="submit" class="answbutton" value="5" id="answer" name="answer">5</button>
+                                        </td>
+                                        <td>
+                                            <button type="submit" class="answbutton" value="13" id="answer" name="answer">13</button><br>
+                                            <button type="submit" class="answbutton" value="-1" id="answer" name="answer">Другое</button>
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                            </table>
+                        </form>
+                        <!-- <form action="checkans.php?game=<? print($game['id']) ?>" method="post" enctype="multipart/form-data">
                             <input type="text" name="answer" id="answer">
                             <button type="submit" class="startbutton">Ответить</button>
-                        </form>
+                        </form> -->
                     <?php
                 } else {
                     $log = $_COOKIE['login'];

@@ -3,7 +3,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/db.class.php";
 $id = $_GET['game'];
 $ans = $_POST['answer'];
 
-
 $result = DB::query("SELECT * FROM `game` WHERE id=$id");
 $game = $result->fetch_assoc();
 
@@ -33,4 +32,3 @@ setcookie('gamescore', $user['gamescore'], time() + 3600, "/");
 setcookie('highscore', $user['highscore'], time() + 3600, "/");
 $id = $id + 1;
 header('Location:/game.php?game=' . $id);
-?>
